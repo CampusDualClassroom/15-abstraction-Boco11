@@ -8,6 +8,5 @@ public class Exercise {
                 Calendar.getInstance().getTime());
         fm.printSpecificData();
         System.out.println(fm.getLocation());
-
     }
 }

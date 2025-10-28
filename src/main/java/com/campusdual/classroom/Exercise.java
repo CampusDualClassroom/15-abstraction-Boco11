@@ -8,6 +8,6 @@ public class Exercise {
                 Calendar.getInstance().getTime());
         fm.printSpecificData();
         System.out.println(fm.getLocation());
-
+        System.out.println(fm.getFormattedDate(fm.getExpirationDate()));
     }
 }

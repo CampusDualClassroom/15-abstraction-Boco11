@@ -12,18 +12,17 @@ public class FreshMerchandise extends Merchandise {
 
     }
 
-
     @Override
     public Object getSpecificData() {
-        String formattedDate = getFormattedDate(expirationDate);
-        return "Localización: " + getLocation() + " Caducidad: " + formattedDate;
+        String formateador2 = getFormattedDate(expirationDate);
+        return "Localización: " + getLocation() + " Caducidad: " + formateador2;
     }
 
 
+    public String getFormattedDate(Date date) {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        return formatter.format(date);}
 
-    public void printSpecificData() {
-        System.out.println(getSpecificData());
-    }
 
     public Date getExpirationDate() {
         return expirationDate;
@@ -33,10 +32,7 @@ public class FreshMerchandise extends Merchandise {
         this.expirationDate = expirationDate;
     }
 
-    public String getFormattedDate(Date date) {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-        return formatter.format(date);
+    public void printSpecificData(){
+        System.out.println(getSpecificData());
     }
-
-
-    }
+}
